@@ -16,14 +16,10 @@ gem 'haml'
 gem 'haml-rails'
 
 # Use SCSS for stylesheets
-gem 'sass'
 gem 'sass-rails'
 
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier'
-
-# Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails'
+# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
+gem 'webpacker'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -41,8 +37,6 @@ group :development, :test do
 end
 
 group :development do
-  # Use CoffeeScript source maps
-  gem 'coffee-rails-source-maps'
   # Provide better error pages
   gem 'better_errors'
   gem 'binding_of_caller'
