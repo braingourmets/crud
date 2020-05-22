@@ -34,6 +34,5 @@ before_script:
 
 script:
   - RAILS_ENV=test bundle exec rake --trace ci
-  - RAILS_ENV=test bundle exec rails assets:precompile
   - gem install brakeman
   - brakeman -z -6
