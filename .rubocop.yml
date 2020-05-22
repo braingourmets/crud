@@ -2,19 +2,31 @@ AllCops:
   TargetRubyVersion: 2.7
   TargetRailsVersion: 6.0
 
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true
 Layout/IndentationConsistency:
   EnforcedStyle: indented_internal_methods
+Layout/LineLength:
+  Max: 80
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
 
+Lint/DeprecatedOpenSSLConstant:
+  Enabled: true
 Lint/RaiseException:
   Enabled: true
 Lint/StructNewOverride:
   Enabled: true
 
+Style/ExponentialNotation:
+  Enabled: true
 Style/HashEachMethods:
   Enabled: true
 Style/HashTransformKeys:
   Enabled: true
 Style/HashTransformValues:
+  Enabled: true
+Style/SlicingWithRange:
   Enabled: true
 
 require:
