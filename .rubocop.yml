@@ -20,6 +20,27 @@ Lint/RaiseException:
 Lint/StructNewOverride:
   Enabled: true
 
+Performance/AncestorsInclude:
+  Enabled: true
+Performance/BigDecimalWithNumericArgument:
+  Enabled: true
+Performance/RedundantSortBlock:
+  Enabled: true
+Performance/RedundantStringChars:
+  Enabled: true
+Performance/ReverseFirst:
+  Enabled: true
+Performance/SortReverse:
+  Enabled: true
+Performance/Squeeze:
+  Enabled: true
+Performance/StringInclude:
+  Enabled: true
+
+Style/AccessorGrouping:
+  Enabled: true
+Style/BisectedAttrAccessor:
+  Enabled: true
 Style/ExponentialNotation:
   Enabled: true
 Style/HashEachMethods:
@@ -27,6 +48,8 @@ Style/HashEachMethods:
 Style/HashTransformKeys:
   Enabled: true
 Style/HashTransformValues:
+  Enabled: true
+Style/RedundantAssignment:
   Enabled: true
 Style/RedundantFetchBlock:
   Enabled: true
