@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 
 # Rails
-gem 'rails', '6.0.3.3'
+gem 'rails', '6.0.3.4'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
