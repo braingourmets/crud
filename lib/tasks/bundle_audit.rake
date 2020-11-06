@@ -28,6 +28,7 @@ namespace :bundle_audit do
   end
 end
 
+desc 'Run bundler-audit'
 task bundle_audit: :environment do
   Rake::Task['bundle_audit:run'].invoke
 end
