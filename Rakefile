@@ -11,26 +11,26 @@ Rails.application.load_tasks
 Rake::Task['test'].clear
 task default: :ci
 
-desc 'Run all CI tasks, including RSpec and static code analysis'
+desc 'Run style checkers and RSpec.'
 task ci: %i[rubocop reek rails_best_practices haml_lint bundler_audit]
 
-desc 'Run RuboCop'
+desc 'Run RuboCop for checking the Ruby files.'
 task rubocop: :environment do
   sh 'rubocop app/ db/seeds.rb Gemfile lib/ Rakefile'
 end
 
-desc 'Run Reek'
+desc 'Run Reek to check for code smells.'
 task reek: :environment do
   sh 'reek -c config/defaults.reek app/ db/seeds.rb Gemfile Rakefile ' \
     'config/routes.rb'
 end
 
-desc 'Run rails_best_practices'
+desc 'Run rails_best_practices to check the way Rails is used'
 task rails_best_practices: :environment do
   sh 'rails_best_practices'
 end
 
-desc 'Run haml-lint'
+desc 'Style-check the HAML files'
 task haml_lint: :environment do
   sh 'haml-lint app/views/'
 end
