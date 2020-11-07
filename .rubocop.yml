@@ -11,3 +11,4 @@ Layout/LineLength:
 require:
   - rubocop-performance
   - rubocop-rails
+  - rubocop-rake
