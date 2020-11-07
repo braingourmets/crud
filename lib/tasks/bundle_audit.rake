@@ -1,23 +1,15 @@
 # frozen_string_literal: true
 
 namespace :bundle_audit do
-  ##
-  # Loads bundler-audit. The require is within a method as it fails if the
-  # bundler-audit gem is not loaded (e.g., on deployment).
-  #
-  def include_bundler_audit
-    require 'bundler/audit/cli'
-  end
-
   desc 'Update bundle-audit database'
   task update: :environment do
-    include_bundler_audit
+    require 'bundler/audit/cli'
     Bundler::Audit::CLI.new.update
   end
 
   desc 'Check gems for vulnerabilities using bundle-audit'
   task check: :environment do
-    include_bundler_audit
+    require 'bundler/audit/cli'
     Bundler::Audit::CLI.new.check
   end
 
