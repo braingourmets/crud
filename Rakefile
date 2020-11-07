@@ -12,7 +12,7 @@ Rake::Task['test'].clear
 task default: :ci
 
 desc 'Run all CI tasks, including RSpec and static code analysis'
-task ci: %i[rubocop reek rails_best_practices haml_lint bundle_audit]
+task ci: %i[rubocop reek rails_best_practices haml_lint bundler_audit]
 
 desc 'Run RuboCop'
 task rubocop: :environment do
