@@ -1,6 +1,6 @@
 # CRUD demo
 
-[![Build Status](https://travis-ci.org/braingourmets/crud.svg?branch=master)](https://travis-ci.org/braingourmets/crud)
+[![GitHub CI Status](https://github.com/braingourmets/crud/workflows/CI/badge.svg?branch=main)](https://github.com/braingourmets/crud/actions)
 
 This little Rails demo application shows CRUD forms for several configurations:
 
