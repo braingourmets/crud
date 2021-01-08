@@ -1,4 +1,4 @@
-= form_for [:admin, espresso] do |f|
+= form_for[:admin, espresso] do |f|
   - if espresso.errors.any?
     %ul
       - espresso.errors.full_messages.each do |msg|
