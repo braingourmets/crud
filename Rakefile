@@ -12,7 +12,7 @@ Rake::Task['test'].clear
 task default: :ci
 
 desc 'Run style checkers and RSpec.'
-task ci: %i[rubocop reek rails_best_practices bundler_audit]
+task ci: %i[rubocop reek rails_best_practices haml_lint bundler_audit]
 
 desc 'Run RuboCop for checking the Ruby files.'
 task rubocop: :environment do
