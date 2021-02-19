@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 
 # Rails
-gem 'rails', '6.0.3.5'
+gem 'rails', '6.1.3'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -40,8 +40,8 @@ group :development do
   # Provide better error pages
   gem 'better_errors'
   gem 'binding_of_caller'
-  # Listen for file changes
   gem 'listen'
+  gem 'rack-mini-profiler'
   gem 'spring-watcher-listen'
 end
 
