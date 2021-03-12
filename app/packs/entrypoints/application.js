@@ -3,8 +3,11 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-import Rails from "@rails/ujs"
-import Turbolinks from "turbolinks"
+import Rails from '@rails/ujs'
+import Turbolinks from 'turbolinks'
+
+window.Rails = Rails
+window.Turbolinks = Turbolinks
 
 Rails.start()
 Turbolinks.start()

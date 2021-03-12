@@ -19,7 +19,7 @@ gem 'haml-rails'
 gem 'sass-rails'
 
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 5.0'
+gem 'webpacker', '6.0.0.beta.7'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
