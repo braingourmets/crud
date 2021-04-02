@@ -284,8 +284,8 @@ DEPENDENCIES
   spring
   spring-watcher-listen
   sqlite3
-  turbolinks
-  webpacker
+  turbolinks (~> 5)
+  webpacker (~> 5.0)
 
 BUNDLED WITH
    2.2.3
