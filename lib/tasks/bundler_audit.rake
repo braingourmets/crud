@@ -4,13 +4,13 @@ namespace :bundler_audit do
   desc 'Update bundler-audit database'
   task update: :environment do
     require 'bundler/audit/cli'
-    Bundler::Audit::CLI.new.update
+    Bundler::Audit::CLI.start(['update'])
   end
 
   desc 'Check gems for vulnerabilities using bundler-audit'
   task check: :environment do
     require 'bundler/audit/cli'
-    Bundler::Audit::CLI.new.check
+    Bundler::Audit::CLI.start(['check'])
   end
 
   desc 'Update vulnerabilities database and check gems using bundler-audit'
