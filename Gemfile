@@ -56,5 +56,5 @@ group :test do
   gem 'rubocop-rake', require: false
 
   # Security checker
-  gem 'bundler-audit', '~>0.7.0.1', require: false
+  gem 'bundler-audit', require: false
 end
