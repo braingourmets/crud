@@ -65,7 +65,6 @@ is "default" and that docker-compose uses "docker-compose exec":
 | `dip bundle …`             | run `bundler`                                |
 | `dip compose …`            | run a docker-compose command                 |
 | `dip compose build`        | (re)build the containers                     |
-| `dip compose build --no-cache` | rebuild the containers after a version update (yarn, node, bundler, …) |
 | `dip compose ps`           | list the running containers                  |
 | `dip down`                 | shut down all containers                     |
 | `dip rails c`              | run the rails console                        |
