@@ -60,6 +60,7 @@ interaction:
 
 provision:
   - dip compose down --volumes
+  - dip compose build
   - dip bundle install
   - dip yarn install
   - dip rails db:setup
