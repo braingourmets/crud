@@ -50,7 +50,7 @@ class BooksController < ApplicationController
       @book = Book.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the whitelist
+    # Never trust parameters from the scary internet, only allow the allowlist
     # through.
     def book_params
       params.require(:book).permit(:title)

@@ -54,7 +54,7 @@ module Admin
         @espresso = Espresso.find(params[:id])
       end
 
-      # Never trust parameters from the scary internet, only allow the whitelist
+      # Never trust parameters from the scary internet, only allow the allowlist
       # through.
       def espresso_params
         params.require(:espresso).permit(:title)

@@ -54,7 +54,7 @@ module Admin
         @dog = Animal::Dog.find(params[:id])
       end
 
-      # Never trust parameters from the scary internet, only allow the whitelist
+      # Never trust parameters from the scary internet, only allow the allowlist
       # through.
       def dog_params
         params.require(:dog).permit(:title)
