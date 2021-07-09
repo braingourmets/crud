@@ -22,7 +22,7 @@ end
 desc 'Run Reek to check for code smells.'
 task reek: :environment do
   sh 'reek -c config/defaults.reek app/ db/seeds.rb Gemfile Rakefile ' \
-    'config/routes.rb'
+     'config/routes.rb'
 end
 
 desc 'Run rails_best_practices to check the way Rails is used'
