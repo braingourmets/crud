@@ -9,7 +9,7 @@ x-app: &app
     context: .dockerdev
     dockerfile: Dockerfile
     args:
-      RUBY_VERSION: '3.0.1'
+      RUBY_VERSION: '3.0.2'
       NODE_MAJOR: '14'
       YARN_VERSION: '1.22.5'
       BUNDLER_VERSION: '2.2.21'
@@ -18,7 +18,7 @@ x-app: &app
     RAILS_ENV: ${RAILS_ENV:-development}
   # We need to update the version number of the image each time
   # we update any of the variables above.
-  image: crud-base:1.0.2
+  image: crud-base:1.0.3
   tmpfs:
     - /tmp
 
