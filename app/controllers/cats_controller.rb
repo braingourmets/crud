@@ -50,7 +50,7 @@ class CatsController < ApplicationController
       @cat = Animal::Cat.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the whitelist
+    # Never trust parameters from the scary internet, only allow the allowlist
     # through.
     def cat_params
       params.require(:cat).permit(:title)
