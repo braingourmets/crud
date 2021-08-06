@@ -49,6 +49,9 @@ group :test do
   # Style checkers
   gem 'haml_lint', require: false
   gem 'rails_best_practices', require: false
+  # Psych 4 currently breaks with YAML aliases, probably in the DB
+  # configuration.
+  gem 'psych', '<4'
   gem 'reek', require: false
   gem 'rubocop', require: false
   gem 'rubocop-performance', require: false
