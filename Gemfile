@@ -21,9 +21,6 @@ gem 'sass-rails'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '6.0.0.beta.7'
 
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
-
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 
