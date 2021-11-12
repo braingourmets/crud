@@ -16,6 +16,7 @@ x-app: &app
   environment: &env
     NODE_ENV: development
     RAILS_ENV: ${RAILS_ENV:-development}
+    YARN_CACHE_FOLDER: /app/node_modules/.yarn-cache
   # We need to update the version number of the image each time
   # we update any of the variables above.
   image: crud-base:1.0.4
