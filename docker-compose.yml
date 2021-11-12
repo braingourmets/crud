@@ -14,7 +14,7 @@ x-app: &app
       YARN_VERSION: '1.22.15'
       BUNDLER_VERSION: '2.2.28'
   environment: &env
-    NODE_ENV: development
+    NODE_ENV: ${NODE_ENV:-development}
     RAILS_ENV: ${RAILS_ENV:-development}
     YARN_CACHE_FOLDER: /app/node_modules/.yarn-cache
   # We need to update the version number of the image each time
