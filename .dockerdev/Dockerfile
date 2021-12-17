@@ -21,17 +21,12 @@ RUN apt-get update -qq \
 # Add NodeJS to sources list
 RUN curl -sL https://deb.nodesource.com/setup_$NODE_MAJOR.x | bash -
 
-# Add Yarn to the sources list
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
-  && echo 'deb http://dl.yarnpkg.com/debian/ stable main' > /etc/apt/sources.list.d/yarn.list
-
 # Install dependencies
 COPY Aptfile /tmp/Aptfile
 RUN apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get -yq dist-upgrade && \
     DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends \
     libsqlite3-dev \
     nodejs \
-    yarn=$YARN_VERSION-1 \
     $(grep -Ev '^\s*#' /tmp/Aptfile | xargs) && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
@@ -59,3 +54,5 @@ RUN gem update --system && \
 RUN mkdir -p /app
 
 WORKDIR /app
+
+RUN npm install -g yarn
