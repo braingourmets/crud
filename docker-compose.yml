@@ -28,11 +28,11 @@ x-backend: &backend
   stdin_open: true
   tty: true
   volumes:
-    - .:/app:cached
-    - rails_cache:/app/tmp/cache:delegated
-    - bundle:/usr/local/bundle:delegated
-    - node_modules:/app/node_modules:delegated
-    - packs:/app/public/packs:delegated
+    - .:/app
+    - rails_cache:/app/tmp/cache
+    - bundle:/usr/local/bundle
+    - node_modules:/app/node_modules
+    - packs:/app/public/packs
   environment:
     <<: *env
     BOOTSNAP_CACHE_DIR: /usr/local/bundle/_bootsnap
@@ -64,10 +64,10 @@ services:
     ports:
       - '3035:3035'
     volumes:
-      - .:/app:cached
-      - bundle:/usr/local/bundle:delegated
-      - node_modules:/app/node_modules:delegated
-      - packs:/app/public/packs:delegated
+      - .:/app
+      - bundle:/usr/local/bundle
+      - node_modules:/app/node_modules
+      - packs:/app/public/packs
     environment:
       <<: *env
       WEBPACKER_DEV_SERVER_HOST: 0.0.0.0
