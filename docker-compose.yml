@@ -18,7 +18,7 @@ x-app: &app
     YARN_CACHE_FOLDER: /app/node_modules/.yarn-cache
   # We need to update the version number of the image each time
   # we update any of the variables above.
-  image: crud-base:1.0.5
+  image: crud-base:1.0.6
   tmpfs:
     - /tmp
     - /app/tmp/pids
