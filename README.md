@@ -32,7 +32,7 @@ in the development database.
 Please note that `dip rake` will not run the specs anymore (unlike `bin/rake`
 without containers). You need to run `dip rspec` separately for this.
 
-### PhpStorm setup
+### RubyMine setup
 
 Create a new remote Ruby SDK in the settings and set is as the default.
 
@@ -44,7 +44,8 @@ In the following dialog, select "Docker Compose" in the service "runner":
 
 After that, you can set up the Ruby Docker integration:
 
-![Languages & Frameworks > Ruby Docke Integration > first option in both option groups](doc/images/rubymine-docker-integration.png)
+![Build, Execution, Deployment > Docker](doc/images/rubymine-docker-integration.png)
+![Build, Execution, Deployment > Docker > Ruby Settings](doc/images/rubymine-ruby-settings-in-docker.png)
 
 #### RuboCop integration
 
