@@ -9,16 +9,16 @@ x-app: &app
     context: .dockerdev
     dockerfile: Dockerfile
     args:
-      RUBY_VERSION: '3.0.3'
+      RUBY_VERSION: '3.1.1'
       NODE_MAJOR: '14'
-      BUNDLER_VERSION: '2.2.28'
+      BUNDLER_VERSION: '2.3.7'
   environment: &env
     NODE_ENV: ${NODE_ENV:-development}
     RAILS_ENV: ${RAILS_ENV:-development}
     YARN_CACHE_FOLDER: /app/node_modules/.yarn-cache
   # We need to update the version number of the image each time
   # we update any of the variables above.
-  image: crud-base:1.0.7
+  image: crud-base:1.0.8
   tmpfs:
     - /tmp
     - /app/tmp/pids
