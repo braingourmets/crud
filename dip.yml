@@ -58,6 +58,12 @@ interaction:
     command: bundle exec rubocop
     compose_run_options: [ no-deps ]
 
+  sa:
+    description: Run static analysis
+    service: runner
+    command: bundle exec rails static_analysis
+    compose_run_options: [ no-deps ]
+
 provision:
   - dip compose down --volumes
   - dip compose build
