@@ -53,4 +53,4 @@ RUN mkdir -p /app
 
 WORKDIR /app
 
-RUN npm install -g yarn
+RUN npm install -g yarn@$YARN_VERSION
