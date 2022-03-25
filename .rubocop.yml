@@ -8,6 +8,11 @@ Layout/IndentationConsistency:
 Layout/LineLength:
   Max: 80
 
+# This is a conceptional demo app for nested namespaces. So there is no need
+# to have proper localization.
+Rails/I18nLocaleTexts:
+  Enabled: false
+
 require:
   - rubocop-performance
   - rubocop-rails
