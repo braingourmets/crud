@@ -29,9 +29,6 @@ The last step will build the containers, create a local configuration file
 packages, create the development and test databases and create dummy records
 in the development database.
 
-Please note that `dip rake` will not run the specs anymore (unlike `bin/rake`
-without containers). You need to run `dip rspec` separately for this.
-
 ### RubyMine setup
 
 Create a new remote Ruby SDK in the settings and set is as the default.
@@ -60,23 +57,23 @@ is "default" and that docker-compose uses "docker-compose exec":
 
 ### Common tasks
 
-| Command                    |                                              |
-|----------------------------|----------------------------------------------|
-| `dip`                      | list the available dip commands              |
-| `dip bundle …`             | run `bundler`                                |
-| `dip compose …`            | run a docker-compose command                 |
-| `dip compose build`        | (re)build the containers                     |
-| `dip compose ps`           | list the running containers                  |
-| `dip down`                 | shut down all containers                     |
-| `dip rails c`              | run the rails console                        |
-| `dip rails migrate`        | run DB migrations                            |
-| `dip rails s`              | run the rails server                         |
-| `dip rake`                 | run the ci tasks (without the specs, though) |
-| `dip rake …`               | run any rake task                            |
-| `dip sh`                   | open a shell into the `rails` container      |
-| `dip up -d webpacker`      | run Webpacker in the background              |
-| `dip yarn …`               | run `yarn`                                   |
-| `docker system prune`      | prune all images, containers and networks    |
+| Command               |                                           |
+|-----------------------|-------------------------------------------|
+| `dip`                 | list the available dip commands           |
+| `dip bundle …`        | run `bundler`                             |
+| `dip compose …`       | run a docker-compose command              |
+| `dip compose build`   | (re)build the containers                  |
+| `dip compose ps`      | list the running containers               |
+| `dip down`            | shut down all containers                  |
+| `dip rails c`         | run the rails console                     |
+| `dip rails migrate`   | run DB migrations                         |
+| `dip rails s`         | run the rails server                      |
+| `dip rails …`         | run any rake task                         |
+| `dip sa`              | run all static code analysis checks       |
+| `dip bash`            | open a shell into the `rails` container   |
+| `dip up -d webpacker` | run Webpacker in the background           |
+| `dip yarn …`          | run `yarn`                                |
+| `docker system prune` | prune all images, containers and networks |
 
 ### Running the development webserver
 
@@ -89,4 +86,4 @@ server:
 
 ## Rake tasks
 
-To run the rake tasks within the container, please use `dip rake …`.
+To run the rake tasks within the container, please use `dip rails …`.
