@@ -1,0 +1,80 @@
+# This setup is based on: https://github.com/evilmartians/ruby-on-whales
+
+x-app: &app
+  build:
+    context: .
+    args:
+      RUBY_VERSION: '3.1.1'
+      NODE_MAJOR: '16'
+      YARN_VERSION: '1.22.18'
+  # We need to update the version number of the image each time
+  # we update any of the variables above.
+  image: crud-base:2.0.0
+  environment: &env
+    NODE_ENV: ${NODE_ENV:-development}
+    RAILS_ENV: ${RAILS_ENV:-development}
+  tmpfs:
+    - /tmp
+    - /app/tmp/pids
+
+x-backend: &backend
+  <<: *app
+  stdin_open: true
+  tty: true
+  volumes:
+    - ..:/app:cached
+    - bundle:/usr/local/bundle
+    - rails_cache:/app/tmp/cache
+    - node_modules:/app/node_modules
+    - assets:/app/public/assets
+    - packs:/app/public/packs
+    - history:/usr/local/hist
+    - ./.bashrc:/root/.bashrc:ro
+  environment: &backend_environment
+    <<: *env
+    WEBPACKER_DEV_SERVER_HOST: webpacker
+    MALLOC_ARENA_MAX: 2
+    WEB_CONCURRENCY: ${WEB_CONCURRENCY:-0}
+    BOOTSNAP_CACHE_DIR: /usr/local/bundle/_bootsnap
+    XDG_DATA_HOME: /app/tmp/caches
+    YARN_CACHE_FOLDER: /app/node_modules/.yarn-cache
+    HISTFILE: /usr/local/hist/.bash_history
+    IRB_HISTFILE: /usr/local/hst/.irb_history
+    EDITOR: vi
+
+services:
+  rails:
+    <<: *backend
+    command: bundle exec rails
+
+  web:
+    <<: *backend
+    command: bundle exec rails server -b 0.0.0.0
+    ports:
+      - '3000:3000'
+    depends_on:
+      webpacker:
+        condition: service_started
+
+  webpacker:
+    <<: *app
+    command: bundle exec ./bin/webpack-dev-server
+    ports:
+      - '3035:3035'
+    volumes:
+      - ..:/app:cached
+      - bundle:/usr/local/bundle
+      - node_modules:/app/node_modules
+      - packs:/app/public/packs
+    environment:
+      <<: *env
+      WEBPACKER_DEV_SERVER_HOST: 0.0.0.0
+      YARN_CACHE_FOLDER: /app/node_modules/.yarn-cache
+
+volumes:
+  assets:
+  bundle:
+  node_modules:
+  history:
+  rails_cache:
+  packs:

@@ -1,1 +1,5 @@
+# We might need an editor to work with credentials
 vim
+
+# needed for the sqlite3 gem
+libsqlite3-dev
