@@ -35,9 +35,10 @@ Create a new remote Ruby SDK in the settings and set is as the default.
 
 ![Languages & Frameworks > Ruby SDK and Gems > Select Interpreter Path > New remote…](doc/images/rubymine-new-remote-sdk.png)
 
-In the following dialog, select "Docker Compose" in the service "runner":
+In the following dialog, select "Docker Compose" with the configuration file
+`./.dockerdev/compose.yml` in the service `rails`:
 
-![Docker Compose, Configuration file(s): ./docker-compose.yml, Service: runner](doc/images/rubymine-sdk-details.png)
+![Docker Compose, Configuration file(s): ./.dockerdev/compose.yml, Service: rails](doc/images/rubymine-sdk-details.png)
 
 After that, you can set up the Ruby Docker integration:
 
