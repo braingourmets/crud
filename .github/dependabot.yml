@@ -11,12 +11,12 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    label:
+    labels:
       - "dependencies"
 
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "daily"
-    label:
+    labels:
       - "dependencies"
