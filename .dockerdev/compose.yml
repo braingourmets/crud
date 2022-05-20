@@ -6,10 +6,10 @@ x-app: &app
     args:
       RUBY_VERSION: '3.1.2'
       NODE_MAJOR: '16'
-      YARN_VERSION: '1.22.18'
+      YARN_VERSION: '1.22.19'
   # We need to update the version number of the image each time
   # we update any of the variables above.
-  image: crud-base:2.0.3
+  image: crud-base:2.0.4
   environment: &env
     NODE_ENV: ${NODE_ENV:-development}
     RAILS_ENV: ${RAILS_ENV:-development}
