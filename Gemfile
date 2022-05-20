@@ -51,7 +51,7 @@ group :test do
   gem 'rails_best_practices', require: false
   # Psych 4 currently breaks with YAML aliases, probably in the DB
   # configuration. This might also be a bug in webpacker.
-  gem 'psych', '<4'
+  gem 'psych', '<5'
   gem 'reek', require: false
   gem 'rubocop', require: false
   gem 'rubocop-performance', require: false
