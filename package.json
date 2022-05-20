@@ -20,7 +20,7 @@
     "postcss-preset-env": "^6.7.1",
     "sass": "^1.52.0",
     "sass-loader": "^13.0.0",
-    "webpack-dev-server": "^3.11.3"
+    "webpack-dev-server": "^4.9.0"
   },
   "version": "0.1.0",
   "babel": {
