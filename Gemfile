@@ -27,6 +27,9 @@ gem 'turbolinks', '~> 5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
+# Temporarily needed for some other gem.
+gem 'net-smtp'
+
 group :development, :test do
   # Spring speeds up development by keeping your application running in the
   # background. Read more: https://github.com/rails/spring
