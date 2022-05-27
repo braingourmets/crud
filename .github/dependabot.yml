@@ -11,8 +11,17 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    ignore:
+      - dependency-name: "rails"
+      - dependency-name: "psych"
+        versions: [ "4.x" ]
 
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "daily"
+    ignore:
+      - dependency-name: "@rails/ujs"
+      - dependency-name: "@rails/webpacker"
+      - dependency-name: "webpacker"
+    versioning-strategy: "increase"
