@@ -6,6 +6,8 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    commit-message:
+      prefix: "[TASK]"
 
   - package-ecosystem: "bundler"
     directory: "/"
@@ -19,6 +21,8 @@ updates:
       - dependency-name: "psych"
         versions: [ "4.x" ]
     versioning-strategy: "increase"
+    commit-message:
+      prefix: "[TASK]"
 
   - package-ecosystem: "npm"
     directory: "/"
@@ -32,3 +36,5 @@ updates:
       - dependency-name: "@rails/webpacker"
       - dependency-name: "webpacker"
     versioning-strategy: "increase"
+    commit-message:
+      prefix: "[TASK]"
