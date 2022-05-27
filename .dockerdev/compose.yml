@@ -39,7 +39,7 @@ x-backend: &backend
     XDG_DATA_HOME: /app/tmp/caches
     YARN_CACHE_FOLDER: /app/node_modules/.yarn-cache
     HISTFILE: /usr/local/hist/.bash_history
-    IRB_HISTFILE: /usr/local/hst/.irb_history
+    IRB_HISTFILE: /usr/local/hist/.irb_history
     EDITOR: vi
 
 services:
