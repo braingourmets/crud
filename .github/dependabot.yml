@@ -6,35 +6,23 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    commit-message:
-      prefix: "[TASK]"
 
   - package-ecosystem: "bundler"
     directory: "/"
     schedule:
       interval: "daily"
-    allow:
-      # allow both direct and indirect updates for all packages
-      - dependency-type: "all"
     ignore:
       - dependency-name: "rails"
       - dependency-name: "psych"
         versions: [ "4.x" ]
     versioning-strategy: "increase"
-    commit-message:
-      prefix: "[TASK]"
 
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "daily"
-    allow:
-      # allow both direct and indirect updates for all packages
-      - dependency-type: "all"
     ignore:
       - dependency-name: "@rails/ujs"
       - dependency-name: "@rails/webpacker"
       - dependency-name: "webpacker"
     versioning-strategy: "increase"
-    commit-message:
-      prefix: "[TASK]"
