@@ -56,7 +56,10 @@ interaction:
     compose_run_options: [ no-deps ]
 
 provision:
-  - dip compose down --volumes
+  # We need the `|| true` part because some docker-compose versions
+  # cannot down a non-existent container without an error,
+  # see https://github.com/docker/compose/issues/9426
+  - dip compose down --volumes || true
   - dip compose build
   - dip bundle install
   - dip yarn install
