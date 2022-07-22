@@ -13,8 +13,6 @@ updates:
       interval: "daily"
     ignore:
       - dependency-name: "rails"
-      - dependency-name: "psych"
-        versions: [ "4.x" ]
     versioning-strategy: "increase"
 
   - package-ecosystem: "npm"
