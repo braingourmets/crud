@@ -19,6 +19,7 @@ RUN apt-get update -qq \
   && truncate -s 0 /var/log/*log
 
 ARG NODE_MAJOR
+ARG NODE_FULL_VERSION
 RUN curl -sL https://deb.nodesource.com/setup_$NODE_MAJOR.x | bash -
 RUN apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get -yq dist-upgrade && \
   DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends \
