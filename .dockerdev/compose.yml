@@ -57,6 +57,8 @@ services:
     depends_on:
       css_watcher:
         condition: service_started
+      js_watcher:
+        condition: service_started
       webpacker:
         condition: service_started
 
@@ -78,6 +80,26 @@ services:
   css_watcher:
     <<: *backend
     command: yarn build:css --watch
+    volumes:
+      - ..:/app:cached
+      - node_modules:/app/node_modules
+    environment:
+      <<: *env
+      YARN_CACHE_FOLDER: /app/node_modules/.yarn-cache
+
+  js_bundling:
+    <<: *backend
+    command: yarn build
+    volumes:
+      - ..:/app:cached
+      - node_modules:/app/node_modules
+    environment:
+      <<: *env
+      YARN_CACHE_FOLDER: /app/node_modules/.yarn-cache
+
+  js_watcher:
+    <<: *backend
+    command: yarn build --watch
     volumes:
       - ..:/app:cached
       - node_modules:/app/node_modules

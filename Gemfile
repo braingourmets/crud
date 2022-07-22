@@ -17,6 +17,7 @@ gem 'haml-rails'
 
 # Use SCSS for stylesheets
 gem 'cssbundling-rails'
+gem 'jsbundling-rails'
 
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '6.0.0.beta.7'
