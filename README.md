@@ -72,18 +72,12 @@ is "default" and that docker-compose uses "docker-compose exec":
 | `dip rails …`         | run any rake task                         |
 | `dip sa`              | run all static code analysis checks       |
 | `dip bash`            | open a shell into the `rails` container   |
-| `dip up -d webpacker` | run Webpacker in the background           |
 | `dip yarn …`          | run `yarn`                                |
 | `docker system prune` | prune all images, containers and networks |
 
 ### Running the development webserver
 
-To avoid that Rails needs to compile the assets on the first request, please
-start the Webpacker watcher in the background before running the Rails
-server:
-
-1. `dip up -d webpacker`
-1. `dip rails s`
+`dip rails s`
 
 ## Rake tasks
 

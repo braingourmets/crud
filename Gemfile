@@ -19,9 +19,6 @@ gem 'haml-rails'
 gem 'cssbundling-rails'
 gem 'jsbundling-rails'
 
-# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '6.0.0.beta.7'
-
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 
