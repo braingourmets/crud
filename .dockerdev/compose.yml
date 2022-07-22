@@ -11,7 +11,7 @@ x-app: &app
       YARN_VERSION: '1.22.19'
   # We need to update the version number of the image each time
   # we update any of the variables above.
-  image: crud-base:2.0.5
+  image: crud-base:2.0.6
   environment: &env
     NODE_ENV: ${NODE_ENV:-development}
     RAILS_ENV: ${RAILS_ENV:-development}
@@ -29,12 +29,10 @@ x-backend: &backend
     - rails_cache:/app/tmp/cache
     - node_modules:/app/node_modules
     - assets:/app/public/assets
-    - packs:/app/public/packs
     - history:/usr/local/hist
     - ./.bashrc:/root/.bashrc:ro
   environment: &backend_environment
     <<: *env
-    WEBPACKER_DEV_SERVER_HOST: webpacker
     MALLOC_ARENA_MAX: 2
     WEB_CONCURRENCY: ${WEB_CONCURRENCY:-1}
     BOOTSNAP_CACHE_DIR: /usr/local/bundle/_bootsnap
@@ -59,23 +57,6 @@ services:
         condition: service_started
       js_watcher:
         condition: service_started
-      webpacker:
-        condition: service_started
-
-  webpacker:
-    <<: *app
-    command: bundle exec ./bin/webpack-dev-server
-    ports:
-      - '3035:3035'
-    volumes:
-      - ..:/app:cached
-      - bundle:/usr/local/bundle
-      - node_modules:/app/node_modules
-      - packs:/app/public/packs
-    environment:
-      <<: *env
-      WEBPACKER_DEV_SERVER_HOST: 0.0.0.0
-      YARN_CACHE_FOLDER: /app/node_modules/.yarn-cache
 
   css_watcher:
     <<: *backend
@@ -113,4 +94,3 @@ volumes:
   node_modules:
   history:
   rails_cache:
-  packs:

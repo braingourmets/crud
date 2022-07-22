@@ -23,6 +23,4 @@ updates:
       interval: "daily"
     ignore:
       - dependency-name: "@rails/ujs"
-      - dependency-name: "@rails/webpacker"
-      - dependency-name: "webpacker"
     versioning-strategy: "increase"
