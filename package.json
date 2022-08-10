@@ -7,7 +7,7 @@
     "turbolinks": "^5.2.0"
   },
   "devDependencies": {
-    "sass": "^1.54.3"
+    "sass": "^1.54.4"
   },
   "version": "0.1.0",
   "browserslist": [
