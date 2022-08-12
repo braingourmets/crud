@@ -11,7 +11,7 @@ x-app: &app
       YARN_VERSION: '1.22.19'
   # We need to update the version number of the image each time
   # we update any of the variables above.
-  image: crud-base:2.0.6
+  image: crud-base:2.0.7
   environment: &env
     NODE_ENV: ${NODE_ENV:-development}
     RAILS_ENV: ${RAILS_ENV:-development}
@@ -36,7 +36,7 @@ x-backend: &backend
     MALLOC_ARENA_MAX: 2
     WEB_CONCURRENCY: ${WEB_CONCURRENCY:-1}
     BOOTSNAP_CACHE_DIR: /usr/local/bundle/_bootsnap
-    XDG_DATA_HOME: /app/tmp/caches
+    XDG_DATA_HOME: /app/tmp/cache
     YARN_CACHE_FOLDER: /app/node_modules/.yarn-cache
     HISTFILE: /usr/local/hist/.bash_history
     IRB_HISTFILE: /usr/local/hist/.irb_history
