@@ -272,6 +272,7 @@ DEPENDENCIES
   rubocop-performance
   rubocop-rails
   rubocop-rake
+  sprockets-rails
   sqlite3
   turbolinks (~> 5)
 
