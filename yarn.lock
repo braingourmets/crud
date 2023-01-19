@@ -112,7 +112,7 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.17.2.tgz#a7ce1ae475e14febb80e2690430e399491206a61"
   integrity sha512-QFJlhf73HCBjTqAWWSIlD8JQBtmue0Dd6UV+KGccycJ3HKj1dCkXdRKJGwc5bZWiI9hrxcWsVEa1kVFaltC4vQ==
 
-"@rails/ujs@^6.1.7":
+"@rails/ujs@^6.1.7-1":
   version "6.1.7"
   resolved "https://registry.yarnpkg.com/@rails/ujs/-/ujs-6.1.7.tgz#b09dc5b2105dd267e8374c47e4490240451dc7f6"
   integrity sha512-0e7WQ4LE/+LEfW2zfAw9ppsB6A8RmxbdAUPAF++UT80epY+7emuQDkKXmaK0a9lp6An50RvzezI0cIQjp1A58w==
