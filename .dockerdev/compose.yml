@@ -5,13 +5,13 @@ x-app: &app
     context: .
     args:
       RUBY_VERSION: '3.2.0'
-      NODE_MAJOR: '16'
+      NODE_MAJOR: '18'
       # The purpose of this variable is to force a rebuild of the image.
-      NODE_FULL_VERSION: '16.17.0'
+      NODE_FULL_VERSION: '18.13.0'
       YARN_VERSION: '1.22.19'
   # We need to update the version number of the image each time
   # we update any of the variables above.
-  image: crud-base:2.1.0
+  image: crud-base:2.2.0
   environment: &env
     NODE_ENV: ${NODE_ENV:-development}
     RAILS_ENV: ${RAILS_ENV:-development}
