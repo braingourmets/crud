@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {
     "@rails/ujs": "^6.1.7-1",
-    "esbuild": "^0.17.3",
+    "esbuild": "^0.17.4",
     "turbolinks": "^5.2.0"
   },
   "devDependencies": {
