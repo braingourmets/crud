@@ -2,7 +2,7 @@
   "name": "crud",
   "private": true,
   "dependencies": {
-    "@rails/ujs": "^6.1.7-1",
+    "@rails/ujs": "^7.0.4-2",
     "esbuild": "^0.17.4",
     "turbolinks": "^5.2.0"
   },

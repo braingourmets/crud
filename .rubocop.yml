@@ -1,7 +1,7 @@
 AllCops:
   NewCops: enable
   TargetRubyVersion: 3.2
-  TargetRailsVersion: 6.1
+  TargetRailsVersion: 7.0
 
 Layout/IndentationConsistency:
   EnforcedStyle: indented_internal_methods
