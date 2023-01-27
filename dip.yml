@@ -4,6 +4,7 @@ version: '7.1'
 # to Docker Compose
 environment:
   RAILS_ENV: development
+  DOCKER_BUILDKIT: 1
 
 compose:
   files:
