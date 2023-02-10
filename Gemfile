@@ -28,9 +28,6 @@ gem 'turbolinks', '~> 5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
-# Temporarily needed for some other gem.
-gem 'net-smtp'
-
 group :development do
   # Provide better error pages
   gem 'better_errors'
