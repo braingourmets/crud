@@ -263,7 +263,6 @@ DEPENDENCIES
   haml_lint
   jsbundling-rails
   listen
-  net-smtp
   psych
   puma
   rack-mini-profiler
