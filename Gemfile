@@ -28,6 +28,11 @@ gem 'turbolinks', '~> 5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
+group :development, :test do
+  # for debugging in RubyMine
+  gem 'ruby-debug-ide', require: false
+end
+
 group :development do
   # Provide better error pages
   gem 'better_errors'
@@ -55,7 +60,4 @@ group :test do
 
   # Security checker
   gem 'bundler-audit', require: false
-
-  # for debugging in RubyMine
-  gem 'ruby-debug-ide', require: false
 end
