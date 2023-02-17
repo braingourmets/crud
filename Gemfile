@@ -55,4 +55,7 @@ group :test do
 
   # Security checker
   gem 'bundler-audit', require: false
+
+  # for debugging in RubyMine
+  gem 'ruby-debug-ide', require: false
 end
